@@ -2,7 +2,7 @@
   "name": "mylog",
   "version": "1.0.0",
   "description": "A pernalized JavaScript Logger",
-  "main": "index.js",
+  "main": "./src/index.js",
   "scripts": {
     "test": "npm test"
   },
@@ -10,6 +10,14 @@
     "type": "git",
     "url": "git+ssh://git@github.com/alcalcides/mylog.git"
   },
+  "keywords": [
+    "mylog",
+    "logger",
+    "logging",
+    "asynchronous",
+    "fs",
+    "file system"
+  ],
   "author": "Alcides Augusto Bezerra Neto <alcalcides@hotmail.com>",
   "license": "MIT",
   "bugs": {
