@@ -1,0 +1,19 @@
+{
+  "name": "mylog",
+  "version": "1.0.0",
+  "description": "A pernalized JavaScript Logger",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/alcalcides/mylog.git"
+  },
+  "author": "Alcides Augusto Bezerra Neto <alcalcides@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alcalcides/mylog/issues"
+  },
+  "homepage": "https://github.com/alcalcides/mylog#readme"
+}
