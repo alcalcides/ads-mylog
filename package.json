@@ -1,14 +1,14 @@
 {
-  "name": "mylog",
+  "name": "ads-mylog",
   "version": "1.0.0",
-  "description": "A pernalized JavaScript Logger",
-  "main": "./src/index.js",
+  "description": "A personalized JavaScript Logger",
+  "main": "src/index.js",
   "scripts": {
     "test": "npm test"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/alcalcides/mylog.git"
+    "url": "git+ssh://git@github.com/alcalcides/ads-mylog.git"
   },
   "keywords": [
     "mylog",
@@ -21,7 +21,7 @@
   "author": "Alcides Augusto Bezerra Neto <alcalcides@hotmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/alcalcides/mylog/issues"
+    "url": "https://github.com/alcalcides/ads-mylog/issues"
   },
-  "homepage": "https://github.com/alcalcides/mylog#readme"
+  "homepage": "https://github.com/alcalcides/ads-mylog#readme"
 }
