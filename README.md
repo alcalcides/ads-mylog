@@ -14,7 +14,7 @@ You can see the exemple file src/exemple.js
 
 
 ```js
-const { log } = require('./index')
+const { log } = require('ads-mylog')
 
 log.error('logging error')
 log.warn('logging warn')
