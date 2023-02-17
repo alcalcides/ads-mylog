@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/alcalcides/ads-mylog#readme",
   "dependencies": {
+    "typescript": "^4.9.5",
     "winston": "^3.8.2"
   }
 }
