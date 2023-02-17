@@ -1,10 +1,6 @@
-const myNames = require('./myNames.json')
-const { getFullName, printFullName } = require('./printMyName')
-
-const myFullname = getFullName(myNames)
+const logger = require('./logger')
 
 module.exports = {
-    myNames,
-    myFullname,
-    prinfFullName: function () { printFullName(myFullname)}
+    logger,
+    log: logger
 }
