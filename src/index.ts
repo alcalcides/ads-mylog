@@ -1,7 +1,12 @@
-//logger.js
-const winston = require('winston');
+import winston, { Logger } from 'winston';
  
-const logger = winston.createLogger({
+/**
+ * Logger is created with the famous logger winston, 
+ * so use .info('...') or .debug('...') or .error(...) and so on.
+ * 
+ * logger.error('qwerty')
+ */
+export const logger: Logger = winston.createLogger({
     format: winston.format.combine(
         winston.format.errors({ stack: true }),
         winston.format.json()
@@ -19,5 +24,6 @@ if (process.env.NODE_ENV !== 'production') {
         format: winston.format.simple()
     }));
 }
- 
-module.exports = logger;
+
+export default logger;
+export const log: Logger = logger
