@@ -1,27 +1,34 @@
-import winston, { Logger } from 'winston';
- 
+import winston, { Logger, createLogger, format, transports } from 'winston';
+
+
+
+export const logsPath: string = "logs/"
+
+
 /**
  * Logger is created with the famous logger winston, 
  * so use .info('...') or .debug('...') or .error(...) and so on.
  * 
  * logger.error('qwerty')
  */
-export const logger: Logger = winston.createLogger({
-    format: winston.format.combine(
-        winston.format.errors({ stack: true }),
-        winston.format.json()
+export const logger: Logger = createLogger({
+    format: format.combine(
+        format.timestamp(),
+        format.printf(info => {
+            return `${info.timestamp} [${info.level.toUpperCase()}] - ${info.message}`;
+        })
     ),
     transports: [
-        new winston.transports.File({ filename: 'error.log', level: 'error' }),
-        new winston.transports.File({ filename: 'info.log', level: 'info' }),
-        new winston.transports.File({ filename: 'debug.log', level: 'debug' }),
-        new winston.transports.Console({level: 'silly'})
+        new transports.File({ filename: `${logsPath}error.log`, level: 'error', format: format.json() }),
+        new transports.File({ filename: `${logsPath}info.log`, level: 'info', format: format.json() }),
+        new transports.File({ filename: `${logsPath}debug.log`, level: 'debug', format: format.json() }),
+        new transports.Console({level: 'warn'})
     ],
 });
  
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.ADS_MYLOG_CONSOLE_LEVEL) {
     logger.add(new winston.transports.Console({
-        format: winston.format.simple()
+        level: String(process.env.ADS_MYLOG_CONSOLE_LEVEL)
     }));
 }
 

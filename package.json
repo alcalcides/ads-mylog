@@ -4,7 +4,10 @@
   "description": "A personalized JavaScript Logger",
   "main": "src/index.ts",
   "scripts": {
-    "test": "npm test"
+    "clearLogs": "rm -rf logs",
+    "build": "rm -rf dist && npx tsc", 
+    "start": "node dist/simpleClientExample.js",
+    "dev": "npm run build && npm start"
   },
   "repository": {
     "type": "git",
@@ -19,7 +22,9 @@
     "file system",
     "local log"
   ],
-  "files": ["dist/"],
+  "files": [
+    "dist/"
+  ],
   "author": "Alcides Augusto Bezerra Neto <alcalcides@hotmail.com>",
   "license": "MIT",
   "bugs": {
@@ -30,6 +35,7 @@
     "winston": "^3.8.2"
   },
   "devDependencies": {
+    "@types/winston": "^2.4.4",
     "@types/node": "^18.14.0",
     "typescript": "^4.9.5"
   }
