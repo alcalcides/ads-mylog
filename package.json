@@ -5,7 +5,7 @@
   "main": "src/index.ts",
   "scripts": {
     "clearLogs": "rm -rf logs",
-    "build": "rm -rf dist && npx tsc", 
+    "build": "rm -rf dist && npx tsc",
     "start": "node dist/simpleClientExample.js",
     "dev": "npm run build && npm start"
   },
@@ -35,8 +35,8 @@
     "winston": "^3.8.2"
   },
   "devDependencies": {
-    "@types/winston": "^2.4.4",
     "@types/node": "^18.14.0",
+    "@types/winston": "^2.4.4",
     "typescript": "^4.9.5"
   }
 }
