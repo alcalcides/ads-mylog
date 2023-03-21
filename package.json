@@ -1,6 +1,6 @@
 {
   "name": "ads-mylog",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A personalized JavaScript Logger",
   "main": "src/index.ts",
   "scripts": {
@@ -17,9 +17,8 @@
     "mylog",
     "logger",
     "logging",
-    "asynchronous",
-    "fs",
-    "file system",
+    "asynchronous log",
+    "file system log",
     "local log"
   ],
   "files": [
