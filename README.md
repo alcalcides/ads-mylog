@@ -2,7 +2,7 @@
 
 Ads-mylog is a pre-configured logger that is built on top of the popular Winston library with sensible defaults. It is designed for who don't have spare time to spend on massive logging details and configurations.
 
-With ads-mylog, logging is simple is ready to use. Simply install, import the logger and start logging! The rest is ready to get started.
+With ads-mylog, logging is simple and is ready to use. Simply install, import the logger and start logging! The rest is ready to get started.
 
 ## Intallation
 
@@ -35,7 +35,7 @@ log.debug('logging debug')
 
 ### Version Control
 
-Ads-mylog writes log data to the `logs` folder. To maintain a clean version history, it's strongly recommended not track log files. To exclude log files, add the folling line to the `.gitignore` file:
+The ads-mylog writes log data to the `logs` folder. To maintain a clean version history, it's strongly recommended not track log files. To exclude log files, add the folling line to the `.gitignore` file:
 
 ```.gitignore
 logs/
