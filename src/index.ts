@@ -1,6 +1,6 @@
 import winston, { Logger, createLogger, format, transports } from "winston";
 
-export const logsPath: string = "logs/";
+export const logsPath: string = "logs";
 
 /**
  * Logger is created with the famous logger winston,
@@ -10,28 +10,31 @@ export const logsPath: string = "logs/";
  */
 export const logger: Logger = createLogger({
   format: format.combine(
-    format.timestamp(),
+    format.timestamp({ format: () => new Date().toLocaleString() }),
     format.printf((info) => {
-      return `${info.timestamp} [${info.level.toUpperCase()}] - ${
-        info.message
-      }`;
+      return `${info.timestamp} [${info.level.toUpperCase()}] - ${info.message}\n`;
     })
   ),
   transports: [
     new transports.File({
       level: "error",
-      filename: `${logsPath}error_${new Date().toISOString()}.log`,
+      filename: `${logsPath}/error_${new Date().toISOString()}.log`,
       format: format.json(),
       maxsize: 4096,
+      maxFiles: 1,
     }),
     new transports.File({
       level: "debug",
-      filename: `${logsPath}debug_${new Date().toISOString()}.log`,
+      filename: `${logsPath}/debug_${new Date().toISOString()}.log`,
       format: format.json(),
-      maxsize: 4096,
-      maxFiles: 2,
+      maxsize: 8192,
+      maxFiles: 1,
     }),
-    new transports.Console({ level: "warn" }),
+  ],
+  exceptionHandlers: [
+    new transports.File({
+      filename: `${logsPath}/exceptions_${new Date().toISOString()}.log`,
+    }),
   ],
 });
 
@@ -39,6 +42,12 @@ if (process.env.ADS_MYLOG_CONSOLE_LEVEL) {
   logger.add(
     new winston.transports.Console({
       level: String(process.env.ADS_MYLOG_CONSOLE_LEVEL),
+    })
+  );
+} else {
+  logger.add(
+    new winston.transports.Console({
+      level: "info",
     })
   );
 }
