@@ -5,8 +5,8 @@
   "main": "src/index.ts",
   "scripts": {
     "clearLogs": "rm -rf logs",
-    "build": "rm -rf dist && npx tsc",
-    "start": "node dist/simpleClientExample.js",
+    "build": "rm -rf lib && npx tsc",
+    "start": "node lib/simpleClientExample.js",
     "dev": "npm run build && npm start"
   },
   "repository": {
