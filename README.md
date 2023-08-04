@@ -12,6 +12,8 @@ npm install ads-mylog
 
 ## How to use
 
+Very simple!
+
 ```js
 const { log } = require('ads-mylog/lib/index')
 

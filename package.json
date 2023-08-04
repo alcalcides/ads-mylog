@@ -1,6 +1,6 @@
 {
   "name": "ads-mylog",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "description": "A personalized JavaScript Logger",
   "main": "src/index.ts",
   "scripts": {
