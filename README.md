@@ -13,8 +13,7 @@ npm install ads-mylog
 ## How to use
 
 ```js
-// const { log } = require('ads-mylog') // only for Intellisense, comment before execute
-const { log } = require('ads-mylog/dist/index')
+const { log } = require('ads-mylog/lib/index')
 
 log.error('logging error')
 log.warn('logging warn')
@@ -25,7 +24,7 @@ log.debug('logging debug')
 or, with TypeScript:
 
 ```ts
-import { log } from 'ads-mylog'
+import { log } from 'ads-mylog/lib/index'
 
 log.error('logging error')
 log.warn('logging warn')
