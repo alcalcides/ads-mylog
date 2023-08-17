@@ -1,6 +1,6 @@
 {
   "name": "ads-mylog",
-  "version": "2.2.4",
+  "version": "2.3.0",
   "description": "A pre-configured JavaScript and Typescript logger",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
