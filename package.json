@@ -1,8 +1,9 @@
 {
   "name": "ads-mylog",
   "version": "2.2.3",
-  "description": "A personalized JavaScript Logger",
-  "main": "src/index.ts",
+  "description": "A pre-configured JavaScript and Typescript logger",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "clearLogs": "rm -rf logs",
     "build": "rm -rf lib && npx tsc",
