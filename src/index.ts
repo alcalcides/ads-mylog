@@ -15,7 +15,9 @@ export const logger: Logger = createLogger({
   format: format.combine(
     format.timestamp({ format: () => new Date().toLocaleString() }),
     format.printf((info) => {
-      return `${info.timestamp} [${info.level.toUpperCase()}] - ${info.message}\n`;
+      return `${info.timestamp} [${info.level.toUpperCase()}] - ${
+        info.message
+      }\n`;
     })
   ),
   transports: [
