@@ -1,6 +1,9 @@
 import winston, { Logger, createLogger, format, transports } from "winston";
+import { deleteOldierLogFiles } from "./deleteOldierLogFiles";
 
 export const logsPath: string = "logs";
+
+deleteOldierLogFiles(logsPath);
 
 /**
  * Logger is created with the famous logger winston,
